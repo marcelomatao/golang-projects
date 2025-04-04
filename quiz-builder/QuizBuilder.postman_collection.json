@@ -1,0 +1,1316 @@
+{
+	"info": {
+		"_postman_id": "7548d695-4e1f-4ecc-9f10-579c25e7d906",
+		"name": "QuizBuilder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1352281"
+	},
+	"item": [
+		{
+			"name": "Authenticated",
+			"item": [
+				{
+					"name": "CreateQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Quiz 1 for user 1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateQuiz2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"Quiz 2 for user 2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "PublishQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"98aa20da-5b11-426f-a705-93921dbc55bf",
+								"publish"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PublishQuiz2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/publish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"98aa20da-5b11-426f-a705-93921dbc55bf",
+										"publish"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "SubmitSolution",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"questions_solution\": [\n        {\n            \"question_uuid\": \"a174a2b2-b7cc-4324-a03c-dd1948b773ee\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"8d11361e-8391-4208-9a26-7d538ac5391f\"\n                },\n                {\n                    \"answer_uuid\": \"ff49eb27-b546-4117-9646-cd6c1427dfe8\"\n                }\n            ]\n        },\n        {\n            \"question_uuid\": \"b58ab32c-b7b6-477e-b65c-2dff988fd9b9\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"ecdd3ff8-c966-432f-8069-d0bafe14da11\"\n                }\n            ]\n        },\n        {\n            \"question_uuid\": \"262d980d-31a4-42a1-95bd-934e1da760c4\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"11f7a346-82c5-47c8-a997-0d8f3b112886\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/solution/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"98aa20da-5b11-426f-a705-93921dbc55bf",
+								"solution",
+								"submit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SubmitSolutionUser2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"questions_solution\": [\n        {\n            \"question_uuid\": \"a174a2b2-b7cc-4324-a03c-dd1948b773ee\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"8d11361e-8391-4208-9a26-7d538ac5391f\"\n                },\n                {\n                    \"answer_uuid\": \"ff49eb27-b546-4117-9646-cd6c1427dfe8\"\n                }\n            ]\n        },\n        {\n            \"question_uuid\": \"b58ab32c-b7b6-477e-b65c-2dff988fd9b9\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"ecdd3ff8-c966-432f-8069-d0bafe14da11\"\n                }\n            ]\n        },\n        {\n            \"question_uuid\": \"262d980d-31a4-42a1-95bd-934e1da760c4\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"11f7a346-82c5-47c8-a997-0d8f3b112886\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/solution/submit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"98aa20da-5b11-426f-a705-93921dbc55bf",
+										"solution",
+										"submit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "SubmitSolutionUser3",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"questions_solution\": [\n        {\n            \"question_uuid\": \"a174a2b2-b7cc-4324-a03c-dd1948b773ee\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"8d11361e-8391-4208-9a26-7d538ac5391f\"\n                },\n                {\n                    \"answer_uuid\": \"ff49eb27-b546-4117-9646-cd6c1427dfe8\"\n                }\n            ]\n        },\n        {\n            \"question_uuid\": \"b58ab32c-b7b6-477e-b65c-2dff988fd9b9\",\n            \"selected_answers\": [\n                {\n                    \"answer_uuid\": \"ecdd3ff8-c966-432f-8069-d0bafe14da11\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/solution/submit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"98aa20da-5b11-426f-a705-93921dbc55bf",
+										"solution",
+										"submit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "AddQuestionToQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"answerType\": \"Multiple\",\n\t\"text\": \"Question 1 for Quiz 1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/fc47f1e8-2203-4f6a-a4d9-eeb66d964289/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"fc47f1e8-2203-4f6a-a4d9-eeb66d964289",
+								"question"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddQuestion2ToQuiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"answerType\": \"Single\",\n\t\"text\": \"Question 2 for Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/fc47f1e8-2203-4f6a-a4d9-eeb66d964289/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"fc47f1e8-2203-4f6a-a4d9-eeb66d964289",
+										"question"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddQuestion3ToQuiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"answerType\": \"Single\",\n\t\"text\": \"Question 3 for Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/fc47f1e8-2203-4f6a-a4d9-eeb66d964289/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"fc47f1e8-2203-4f6a-a4d9-eeb66d964289",
+										"question"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "AddAnswerToQuestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"isCorrect\": true,\n\t\"text\": \"Answer 1 Question 1 Quiz 1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"question",
+								"262d980d-31a4-42a1-95bd-934e1da760c4",
+								"answer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddAnswer2ToQuestion1Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": true,\n\t\"text\": \"Answer 2 Question 1 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer3ToQuestion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": false,\n\t\"text\": \"Answer 3 Question 1 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer1ToQuestion2Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": false,\n\t\"text\": \"Answer 1 Question 2 Quiz 1\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer2ToQuestion2Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": true,\n\t\"text\": \"Answer 2 Question 2 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer3ToQuestion2Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": false,\n\t\"text\": \"Answer 3 Question 2 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer1ToQuestion3Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": false,\n\t\"text\": \"Answer 1 Question 3 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "AddAnswer2ToQuestion3Quiz1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"isCorrect\": true,\n\t\"text\": \"Answer 2 Question 3 Quiz 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/quiz/question/262d980d-31a4-42a1-95bd-934e1da760c4/answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"quiz",
+										"question",
+										"262d980d-31a4-42a1-95bd-934e1da760c4",
+										"answer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "GetQuiz",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQuizSolutionsForOwnerUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/98aa20da-5b11-426f-a705-93921dbc55bf/solutions/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"98aa20da-5b11-426f-a705-93921dbc55bf",
+								"solutions",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQuizzesSubmitedSolutions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/solutions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"solutions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQuizzesPublished",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/published/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"published",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/fc47f1e8-2203-4f6a-a4d9-eeb66d964289",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"fc47f1e8-2203-4f6a-a4d9-eeb66d964289"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/question/cd54b565-de62-40d2-b988-faa7445992f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"question",
+								"cd54b565-de62-40d2-b988-faa7445992f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAnswer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzMzNAZ21haWwuY29tIiwibmFtZSI6IlRlc3QgMzMzIiwidXVpZCI6ImRkNjA4ODEyLTcwNDgtNDUwNS1iYzY3LWQ1OTcyMWNjMjEwZiJ9.liGBwZcIfIUlEiyaFDa71VGjqVUW_1mPkkjsAKDoU5Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/quiz/question/answer/cecf0438-225c-4413-ad7c-5310a131b93e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"quiz",
+								"question",
+								"answer",
+								"cecf0438-225c-4413-ad7c-5310a131b93e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \t\"email\": \"test333@gmail.com\",\n\t\"name\": \"Test 333\",\n\t\"password\": \"user123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "RegisterUser2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \t\"email\": \"test444@gmail.com\",\n\t\"name\": \"Test 444\",\n\t\"password\": \"user123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "RegisterUser3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \t\"email\": \"test555@gmail.com\",\n\t\"name\": \"Test 555\",\n\t\"password\": \"user123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \t\"email\": \"test333@gmail.com\",\n\t\"password\": \"user123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LoginUser2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \t\"email\": \"test444@gmail.com\",\n\t\"password\": \"user123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "LoginUser3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \t\"email\": \"test555@gmail.com\",\n\t\"password\": \"user123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
