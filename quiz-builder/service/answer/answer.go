@@ -2,7 +2,6 @@ package answer
 
 import (
 	"quiz-builder/entity"
-	"quiz-builder/logger"
 
 	"quiz-builder/repository/quiz_builder"
 
@@ -22,17 +21,14 @@ type IAnswerService interface {
 
 // AnswerService service layer
 type AnswerService struct {
-	logger     logger.Logger
 	repository quiz_builder.QuizBuilderRepository
 }
 
 // NewAnswerService creates a new answer service
 func NewAnswerService(
-	logger logger.Logger,
 	repository quiz_builder.QuizBuilderRepository,
 ) AnswerService {
 	return AnswerService{
-		logger:     logger,
 		repository: repository,
 	}
 }

@@ -14,18 +14,46 @@ import (
 	gormlogger "gorm.io/gorm/logger"
 )
 
+type ILogger interface {
+	Debug(args ...interface{})
+	Info(args ...interface{})
+	Warn(args ...interface{})
+	Error(args ...interface{})
+	Fatal(args ...interface{})
+	Panic(args ...interface{})
+	GetGormLogger() IGormLogger
+	GetFxLogger() IFxLogger
+	GetGinLogger() IGinLogger
+}
+
 // Logger structure
 type Logger struct {
 	config.Config
 	*zap.SugaredLogger
 }
 
+type IGinLogger interface {
+	Write(p []byte) (n int, err error)
+}
+
 type GinLogger struct {
 	*Logger
 }
 
+type IFxLogger interface {
+	LogEvent(event fxevent.Event)
+}
+
 type FxLogger struct {
 	*Logger
+}
+
+type IGormLogger interface {
+	LogMode(level gormlogger.LogLevel) gormlogger.Interface
+	Info(ctx context.Context, str string, args ...interface{})
+	Warn(ctx context.Context, str string, args ...interface{})
+	Error(ctx context.Context, str string, args ...interface{})
+	Trace(ctx context.Context, begin time.Time, fc func() (string, int64), err error)
 }
 
 type GormLogger struct {
